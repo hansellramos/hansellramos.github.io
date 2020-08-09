@@ -1,0 +1,37 @@
+
+.profile-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 128px !important;
+    max-height: 128px !important;
+    margin: auto;
+}
+
+.profile-name, .profile-email {
+    margin: auto !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    h3 {
+        font-size: 14px;
+    }
+}
+
+.content > div {
+    margin: 1.5em;
+}
+
+.menu-item {
+    border-radius: 1.5em !important;
+}
+
+body {
+    background-color: #2b2b2b;
+    & > * > .ion-page {
+        margin: 2em;
+        border-radius: 2.5em;
+        box-shadow: 10px 10px 40px -20px #404046;
+    }
+}
