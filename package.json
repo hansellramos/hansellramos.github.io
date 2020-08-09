@@ -7,7 +7,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "ghpage": "ionic build --prod -- --base-href https://hansellramos.github.io/hansellramos.github.io --dir=www",
+    "ghpage": "ionic build --prod -- --base-href https://hansellramos.github.io/hansellramos.github.io",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
