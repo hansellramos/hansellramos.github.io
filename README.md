@@ -24,4 +24,4 @@ All page content lives in `src/data/profile.js`. Photos go in `public/images/` a
 
 ## Deploy
 
-`.github/workflows/deploy.yml` builds on every push and pull request. It deploys to GitHub Pages only from `master`. In the repository settings, Pages must use **GitHub Actions** as its source.
+`.github/workflows/deploy.yml` builds on every push and pull request. On pushes to `master` it commits the build to the `gh-page` branch, which is the branch GitHub Pages serves.
