@@ -1,12 +1,14 @@
 <script setup>
-import { profile } from '../data/profile'
+import { computed } from 'vue'
+import { shared } from '../data/profile'
+import { lang, languages, t } from '../i18n'
 
-const links = [
-  { href: '#work', label: 'Work' },
-  { href: '#how', label: 'How I work' },
-  { href: '#beyond', label: 'Beyond code' },
-  { href: '#contact', label: 'Contact' },
-]
+const links = computed(() => [
+  { href: '#work', label: t.value.nav.work },
+  { href: '#how', label: t.value.nav.how },
+  { href: '#beyond', label: t.value.nav.beyond },
+  { href: '#contact', label: t.value.nav.contact },
+])
 </script>
 
 <template>
@@ -15,7 +17,19 @@ const links = [
       <a href="#top" class="brand mono">hansell<span class="brand-accent">ramos</span></a>
       <div class="links">
         <a v-for="link in links" :key="link.href" :href="link.href">{{ link.label }}</a>
-        <a v-if="profile.cvUrl" :href="profile.cvUrl" class="cv" download>Download CV</a>
+        <a v-if="shared.cvUrl" :href="shared.cvUrl" class="cv" download>{{ t.nav.cv }}</a>
+        <div class="lang mono" role="group" :aria-label="t.nav.lang">
+          <button
+            v-for="code in languages"
+            :key="code"
+            type="button"
+            :class="{ active: lang === code }"
+            :aria-pressed="lang === code"
+            @click="lang = code"
+          >
+            {{ code.toUpperCase() }}
+          </button>
+        </div>
       </div>
     </nav>
   </header>
@@ -79,6 +93,32 @@ const links = [
 .links .cv:hover {
   color: var(--sand);
   background: #1d3743;
+}
+
+.lang {
+  display: inline-flex;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  min-width: 44px;
+  min-height: 36px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.lang button.active {
+  background: var(--ink);
+  color: var(--sand);
 }
 
 @media (max-width: 640px) {

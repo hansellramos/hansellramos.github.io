@@ -1,11 +1,13 @@
 <script setup>
+import { t } from '../i18n'
+
 const year = new Date().getFullYear()
 </script>
 
 <template>
   <footer class="footer">
     <div class="container inner mono">
-      <span>© {{ year }} Hansel Ramos · Built with Vue, with an AI pair</span>
+      <span>© {{ year }} Hansel Ramos · {{ t.footer }}</span>
       <a href="/llms.txt">/llms.txt</a>
     </div>
   </footer>

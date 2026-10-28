@@ -1,22 +1,17 @@
 <script setup>
 import PromptLabel from './PromptLabel.vue'
-import { workflow } from '../data/profile'
-
-const last = workflow.length - 1
+import { t } from '../i18n'
 </script>
 
 <template>
   <section id="how" class="container section">
     <div class="head">
-      <PromptLabel text="how do you work with AI?" />
-      <h2 class="section-title">AI does the heavy lifting. I own every decision.</h2>
-      <p class="lead">
-        The same workflow that sped up my team by 50%, condensed. I review and approve every step, and nothing ships
-        that I don't understand.
-      </p>
+      <PromptLabel :text="t.how.prompt" />
+      <h2 class="section-title">{{ t.how.title }}</h2>
+      <p class="lead">{{ t.how.lead }}</p>
     </div>
     <ol class="steps">
-      <li v-for="(step, i) in workflow" :key="step.title" class="step" :class="{ final: i === last }">
+      <li v-for="(step, i) in t.workflow" :key="i" class="step" :class="{ final: i === t.workflow.length - 1 }">
         <span class="num mono">{{ String(i + 1).padStart(2, '0') }}</span>
         <strong>{{ step.title }}</strong>
         <span class="body">{{ step.body }}</span>

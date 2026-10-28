@@ -1,23 +1,29 @@
 <script setup>
+import { computed } from 'vue'
 import PromptLabel from './PromptLabel.vue'
-import { work } from '../data/profile'
+import { shared } from '../data/profile'
+import { t } from '../i18n'
+
+const work = computed(() =>
+  t.value.work.map((item, i) => ({ ...item, tags: [...shared.workTags[i], ...(item.extraTags || [])] })),
+)
 </script>
 
 <template>
   <section id="work" class="container section">
     <div class="head">
-      <PromptLabel text="show selected work" />
-      <h2 class="section-title">Problems I've helped solve</h2>
+      <PromptLabel :text="t.workSection.prompt" />
+      <h2 class="section-title">{{ t.workSection.title }}</h2>
     </div>
     <div class="cards">
-      <article v-for="item in work" :key="item.title" class="card">
+      <article v-for="item in work" :key="item.context" class="card">
         <div class="meta">
           <span class="context mono">{{ item.context }}</span>
           <span v-if="item.badge" class="badge mono">{{ item.badge }}</span>
         </div>
         <h3>{{ item.title }}</h3>
         <p>{{ item.body }}</p>
-        <ul class="tags" aria-label="Technologies">
+        <ul class="tags" :aria-label="t.workSection.tagsLabel">
           <li v-for="tag in item.tags" :key="tag" class="mono">{{ tag }}</li>
         </ul>
       </article>

@@ -1,11 +1,11 @@
 <script setup>
-import { impact } from '../data/profile'
+import { t } from '../i18n'
 </script>
 
 <template>
-  <section class="strip" aria-label="Impact">
+  <section class="strip" :aria-label="t.impactLabel">
     <dl class="container grid">
-      <div v-for="item in impact" :key="item.value" class="item">
+      <div v-for="item in t.impact" :key="item.value" class="item">
         <dt class="value">{{ item.value }}</dt>
         <dd class="label">{{ item.label }}</dd>
       </div>

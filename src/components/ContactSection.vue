@@ -1,21 +1,22 @@
 <script setup>
 import PromptLabel from './PromptLabel.vue'
-import { profile } from '../data/profile'
+import { shared } from '../data/profile'
+import { t } from '../i18n'
 </script>
 
 <template>
   <section id="contact" class="container section">
     <div class="panel">
       <div class="copy">
-        <PromptLabel text="how can we work together?" dark />
-        <h2 class="section-title">Got a problem worth solving? Let's talk.</h2>
-        <p>Open to senior remote roles in PHP/Laravel, Vue and AI-assisted development, working US Eastern hours.</p>
+        <PromptLabel :text="t.contact.prompt" dark />
+        <h2 class="section-title">{{ t.contact.title }}</h2>
+        <p>{{ t.contact.body }}</p>
       </div>
       <div class="actions">
-        <a :href="`mailto:${profile.email}`" class="email">{{ profile.email }}</a>
+        <a :href="`mailto:${shared.email}`" class="email">{{ shared.email }}</a>
         <div class="row">
-          <a :href="profile.links.linkedin" class="ghost" rel="me noopener" target="_blank">LinkedIn</a>
-          <a :href="profile.links.github" class="ghost" rel="me noopener" target="_blank">GitHub</a>
+          <a :href="shared.links.linkedin" class="ghost" rel="me noopener" target="_blank">LinkedIn</a>
+          <a :href="shared.links.github" class="ghost" rel="me noopener" target="_blank">GitHub</a>
         </div>
       </div>
     </div>

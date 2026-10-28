@@ -1,6 +1,10 @@
 <script setup>
+import { computed } from 'vue'
 import PromptLabel from './PromptLabel.vue'
-import { interests } from '../data/profile'
+import { shared } from '../data/profile'
+import { t } from '../i18n'
+
+const interests = computed(() => t.value.interests.map((item, i) => ({ ...shared.interests[i], ...item })))
 </script>
 
 <template>
@@ -8,20 +12,16 @@ import { interests } from '../data/profile'
     <div class="container section">
       <div class="head">
         <div class="title">
-          <PromptLabel text="what drives you?" />
-          <h2 class="section-title">Technology is worth it when it helps someone.</h2>
+          <PromptLabel :text="t.beyond.prompt" />
+          <h2 class="section-title">{{ t.beyond.title }}</h2>
         </div>
-        <p class="lead">
-          That's why AI excites me: it can give people hours of their lives back. I'm also an entrepreneur and a DJ.
-          When I'm not building, I'm traveling, on Colombia's Caribbean coast, up a trail or behind a drone
-          controller, and at home there's usually a PlayStation controller in my hands.
-        </p>
+        <p class="lead">{{ t.beyond.lead }}</p>
       </div>
       <div class="grid">
-        <figure v-for="item in interests" :key="item.title">
+        <figure v-for="(item, i) in interests" :key="i">
           <img v-if="item.photo" :src="item.photo" :alt="item.caption" class="media" loading="lazy" />
           <div v-else class="media placeholder mono" :style="{ background: item.tint }" aria-hidden="true">
-            {{ item.placeholder }}
+            {{ item.title }}
           </div>
           <figcaption>
             <strong>{{ item.title }}</strong>

@@ -1,8 +1,10 @@
 <script setup>
-import { onMounted, onBeforeUnmount, ref } from 'vue'
-import { profile } from '../data/profile'
+import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
+import { shared } from '../data/profile'
+import { t } from '../i18n'
 
-const command = `whoami ${profile.handle}`
+const command = `whoami ${shared.handle}`
+const keyWidth = computed(() => Math.max(...t.value.status.map((row) => row.key.length)) + 2)
 const typed = ref(command)
 let timer = null
 
@@ -30,25 +32,25 @@ onBeforeUnmount(() => clearInterval(timer))
         <span class="sr-only">{{ command }}</span>
         <span class="cursor" aria-hidden="true">▍</span>
       </p>
-      <h1>{{ profile.headline }}</h1>
-      <p class="intro">{{ profile.intro }}</p>
+      <h1>{{ t.hero.headline }}</h1>
+      <p class="intro">{{ t.hero.intro }}</p>
       <div class="actions">
-        <a href="#work" class="btn btn-primary">See selected work</a>
-        <a href="#contact" class="btn btn-outline">Let's talk</a>
-        <span class="where mono">{{ profile.location }}</span>
+        <a href="#work" class="btn btn-primary">{{ t.hero.ctaWork }}</a>
+        <a href="#contact" class="btn btn-outline">{{ t.hero.ctaTalk }}</a>
+        <span class="where mono">{{ t.hero.location }}</span>
       </div>
     </div>
 
     <div class="visual">
-      <img v-if="profile.photo" :src="profile.photo" :alt="`Portrait of ${profile.name}`" class="photo" />
-      <div v-else class="photo placeholder mono" role="img" aria-label="Photo placeholder">
-        Your photo here — outdoors, natural light
+      <img v-if="shared.photo" :src="shared.photo" :alt="t.hero.photoAlt" class="photo" />
+      <div v-else class="photo placeholder mono" role="img" :aria-label="t.hero.photoPlaceholder">
+        {{ t.hero.photoPlaceholder }}
       </div>
 
       <div class="status mono">
-        <div class="status-cmd">$ {{ profile.handle }} --status</div>
-        <div v-for="row in profile.status" :key="row.key">
-          <span :class="row.highlight ? 'key-hl' : 'key'">{{ row.key.padEnd(9, ' ') }}</span>{{ row.value }}
+        <div class="status-cmd">$ {{ shared.handle }} --status</div>
+        <div v-for="row in t.status" :key="row.key">
+          <span :class="row.highlight ? 'key-hl' : 'key'">{{ row.key.padEnd(keyWidth, ' ') }}</span>{{ row.value }}
         </div>
       </div>
     </div>
