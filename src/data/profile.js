@@ -15,7 +15,7 @@ export const profile = {
     github: 'https://github.com/hansellramos',
   },
   cvUrl: '', // set to '/cv/Hansel-Ramos-CV.pdf' once a public CV (no phone number) is added
-  photo: '', // e.g. '/images/hansel.jpg'
+  photo: '/images/hansel.webp',
   status: [
     { key: 'building', value: 'AI features that go beyond chat' },
     { key: 'studying', value: 'MSc in Artificial Intelligence · UNIR' },
