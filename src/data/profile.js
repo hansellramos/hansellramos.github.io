@@ -80,7 +80,7 @@ export const interests = [
     tint: '#d3dcef',
     photo: '/images/gaming.webp',
   },
-  { title: 'Music', caption: 'DJ behind the decks, reading the room', placeholder: 'DJ photo', tint: '#ecd5dc', photo: '' },
+  { title: 'Music', caption: 'DJ behind the decks, reading the room', placeholder: 'DJ photo', tint: '#ecd5dc', photo: '/images/dj.webp' },
   { title: 'Travel', caption: 'New places, new people, new perspectives', placeholder: 'Travel photo', tint: '#d5e6f1', photo: '/images/travel.webp' },
   {
     title: 'Entrepreneurship',
