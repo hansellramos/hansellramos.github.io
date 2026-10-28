@@ -1,0 +1,29 @@
+# Hansel Ramos (hansellramos)
+
+> Senior Software Engineer with 18+ years of experience building backend-heavy web and mobile-connected software. Specialized in PHP/Laravel, with strong Vue.js and Angular frontend skills, and AI-assisted development as part of daily work. Based in Barranquilla, Colombia (UTC-5), working remotely with US teams.
+
+## Focus
+
+- Backend: PHP, Laravel, CodeIgniter, Symfony, REST APIs, MySQL, PostgreSQL, Redis
+- Frontend: Vue.js 3 (Composition API, Pinia), Angular
+- AI engineering: Claude Code, MCP (Model Context Protocol), Laravel Boost, AI-assisted development workflows
+- Testing: PHPUnit, TDD, Playwright
+- Currently pursuing an MSc in Artificial Intelligence at Universidad Internacional de La Rioja (UNIR)
+
+## Selected work
+
+- Disney / Appetize POS: re-architected a 1.5M-record nightly product sync into parallel Airflow jobs, cutting runtime from 12 hours to 3.
+- Health Recovery Solutions: designed an 18-step AI-assisted development workflow, piloted with a team of 6; delivery speed rose 50% and it was adopted company-wide.
+- Compliance CRM: led the rewrite of a legacy PHP 5 system serving 124 US small businesses into a Laravel API and Vue app, migrated with the Strangler Fig pattern and zero downtime.
+- Travelia: designed and prototyped AI features embedded in the core product (proof of concept, under evaluation).
+
+## Availability
+
+Open to senior remote roles in PHP/Laravel, Vue and AI-assisted development, working US Eastern hours.
+
+## Contact
+
+- Email: hansell.ramos@gmail.com
+- LinkedIn: https://linkedin.com/in/hansellramos
+- GitHub: https://github.com/hansellramos
+- Site: https://hansellramos.github.io/
