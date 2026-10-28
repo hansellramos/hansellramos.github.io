@@ -1,10 +1,9 @@
 <script setup>
-import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
 import { shared } from '../data/profile'
 import { t } from '../i18n'
 
 const command = `whoami ${shared.handle}`
-const keyWidth = computed(() => Math.max(...t.value.status.map((row) => row.key.length)) + 2)
 const typed = ref(command)
 let timer = null
 
@@ -49,9 +48,12 @@ onBeforeUnmount(() => clearInterval(timer))
 
       <div class="status mono">
         <div class="status-cmd">$ {{ shared.handle }} --status</div>
-        <div v-for="row in t.status" :key="row.key">
-          <span :class="row.highlight ? 'key-hl' : 'key'">{{ row.key.padEnd(keyWidth, ' ') }}</span>{{ row.value }}
-        </div>
+        <dl class="status-rows">
+          <template v-for="row in t.status" :key="row.key">
+            <dt :class="row.highlight ? 'key-hl' : 'key'">{{ row.key }}</dt>
+            <dd>{{ row.value }}</dd>
+          </template>
+        </dl>
       </div>
     </div>
   </section>
@@ -160,14 +162,24 @@ h1 {
   border-radius: 18px;
   padding: 20px 22px;
   font-size: 13px;
-  line-height: 1.75;
-  white-space: pre-wrap;
+  line-height: 1.6;
   box-shadow: 0 20px 40px rgba(16, 34, 43, 0.22);
 }
 
 .status-cmd {
   color: var(--night-dim);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.status-rows {
+  margin: 0;
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 4px 16px;
+}
+
+.status-rows dd {
+  margin: 0;
 }
 
 .key {

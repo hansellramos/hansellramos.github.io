@@ -37,6 +37,13 @@ const links = computed(() => [
 
 <style scoped>
 .nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: rgba(246, 241, 231, 0.88);
+  backdrop-filter: blur(14px) saturate(1.3);
+  -webkit-backdrop-filter: blur(14px) saturate(1.3);
   border-bottom: 1px solid var(--sand-line);
 }
 

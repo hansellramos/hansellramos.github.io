@@ -35,6 +35,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* keep anchored sections clear of the sticky navigation */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 body {
   margin: 0;
   background: var(--sand);
