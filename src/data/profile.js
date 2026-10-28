@@ -27,6 +27,13 @@ export const shared = {
       license: 'AGPL-3.0',
       tags: ['Vue 3', 'Pinia', 'Node', 'Express', 'Prisma', 'WebAuthn PRF', 'Web Crypto', 'HLS'],
     },
+    {
+      id: 'air-a',
+      name: 'AIR-A',
+      url: '', // add https://github.com/hansellramos/air-a if the repo goes public
+      private: true,
+      tags: ['Python', 'FastAPI', 'SQLite', 'Vue 3', 'Claude', 'Ollama', 'Whisper', 'Playwright', 'Jira', 'Slack'],
+    },
   ],
   interests: [
     { tint: '#cfe3df', photo: '/images/drone.webp' },
@@ -118,6 +125,10 @@ export const content = {
       {
         tagline: 'End-to-end encrypted photo, video and file vault you host yourself',
         body: 'A self-hosted vault where the server only stores ciphertext: it never sees files, names, tags, dates or locations. You unlock it with a passkey (WebAuthn PRF). It streams encrypted HLS video decrypted in the browser, and I run it every day on a small home NAS.',
+      },
+      {
+        tagline: 'An AI assistant with an expressive robot face that runs my daily workflow',
+        body: 'AIR-A (Artificial Intelligent Resource Avatar) watches the tickets assigned to me and my Slack messages, follows up on tasks, reproduces scenarios, helps me make changes and tests them against the acceptance criteria, running web flows with Playwright. It also documents the work and reports the hours spent. It talks back with voice, using local speech-to-text, and connects to Jira, Linear, Notion, GitHub, Gmail, Outlook and calendars.',
       },
     ],
     beyond: {
@@ -223,6 +234,10 @@ export const content = {
       {
         tagline: 'Bóveda de fotos, videos y archivos con cifrado de extremo a extremo, alojada por ti',
         body: 'Una bóveda autoalojada donde el servidor solo guarda datos cifrados: nunca ve archivos, nombres, etiquetas, fechas ni ubicaciones. Se desbloquea con una passkey (WebAuthn PRF), reproduce video HLS cifrado que se descifra en el navegador, y la uso a diario en un pequeño NAS en casa.',
+      },
+      {
+        tagline: 'Un asistente de IA con una carita robótica expresiva que maneja mi flujo de trabajo diario',
+        body: 'AIR-A (Artificial Intelligent Resource Avatar) está pendiente de los tickets que me asignan y de mis mensajes de Slack, hace seguimiento a las tareas, reproduce escenarios, me ayuda con los cambios y los prueba contra los criterios de aceptación, ejecutando flujos web con Playwright. También documenta el trabajo y reporta las horas invertidas. Responde con voz, con reconocimiento de voz local, y se conecta con Jira, Linear, Notion, GitHub, Gmail, Outlook y calendarios.',
       },
     ],
     beyond: {
