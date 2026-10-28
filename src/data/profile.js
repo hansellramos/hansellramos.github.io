@@ -81,7 +81,7 @@ export const interests = [
     photo: '',
   },
   { title: 'Music', caption: 'DJ behind the decks, reading the room', placeholder: 'DJ photo', tint: '#ecd5dc', photo: '' },
-  { title: 'Travel', caption: 'New places, new people, new perspectives', placeholder: 'Travel photo', tint: '#d5e6f1', photo: '' },
+  { title: 'Travel', caption: 'New places, new people, new perspectives', placeholder: 'Travel photo', tint: '#d5e6f1', photo: '/images/travel.webp' },
   {
     title: 'Entrepreneurship',
     caption: 'Turning ideas into businesses that serve real people',
