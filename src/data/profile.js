@@ -70,7 +70,7 @@ export const workflow = [
 
 export const interests = [
   { title: 'Drones', caption: 'Seeing the whole system from above', placeholder: 'Drone shot', tint: '#cfe3df', photo: '' },
-  { title: 'The beach', caption: 'Where I reset and think clearly', placeholder: 'Beach photo', tint: '#f1dcc3', photo: '' },
+  { title: 'The beach', caption: 'Where I reset and think clearly', placeholder: 'Beach photo', tint: '#f1dcc3', photo: '/images/beach.webp' },
   { title: 'Trekking', caption: 'Long trails, one step at a time', placeholder: 'Trekking photo', tint: '#d6decb', photo: '' },
   { title: 'The gym', caption: 'Consistency beats intensity', placeholder: 'Gym photo', tint: '#d9d4e4', photo: '' },
   {
