@@ -19,7 +19,7 @@ export const profile = {
   status: [
     { key: 'building', value: 'AI features that go beyond chat' },
     { key: 'studying', value: 'MSc in Artificial Intelligence · UNIR' },
-    { key: 'offline', value: 'trails, the gym, flying drones' },
+    { key: 'offline', value: 'trails, the gym, drones, PlayStation' },
     { key: 'open to', value: 'senior remote roles · US hours', highlight: true },
   ],
 }
@@ -73,4 +73,11 @@ export const interests = [
   { title: 'The beach', caption: 'Where I reset and think clearly', placeholder: 'Beach photo', tint: '#f1dcc3', photo: '' },
   { title: 'Trekking', caption: 'Long trails, one step at a time', placeholder: 'Trekking photo', tint: '#d6decb', photo: '' },
   { title: 'The gym', caption: 'Consistency beats intensity', placeholder: 'Gym photo', tint: '#d9d4e4', photo: '' },
+  {
+    title: 'Gaming',
+    caption: 'PlayStation fan. Horizon, Spider-Man: Miles Morales and Assassin\'s Creed on top; Pokémon and Mario at heart',
+    placeholder: 'Gaming setup photo',
+    tint: '#d3dcef',
+    photo: '',
+  },
 ]

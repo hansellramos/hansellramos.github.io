@@ -13,7 +13,8 @@ import { interests } from '../data/profile'
         </div>
         <p class="lead">
           That's why AI excites me: it can give people hours of their lives back. When I'm not building, I'm usually
-          outside, on Colombia's Caribbean coast, up a trail or behind a drone controller.
+          outside, on Colombia's Caribbean coast, up a trail or behind a drone controller. And when I'm in, there's
+          usually a PlayStation controller in my hands.
         </p>
       </div>
       <div class="grid">
@@ -64,13 +65,12 @@ import { interests } from '../data/profile'
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 
 figure {
-  flex: 1 1 240px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -115,8 +115,9 @@ figcaption span {
     padding-bottom: 64px;
   }
 
-  figure {
-    flex-basis: calc(50% - 10px);
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 }
 </style>
