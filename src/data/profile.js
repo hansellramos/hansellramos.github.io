@@ -72,7 +72,7 @@ export const interests = [
   { title: 'Drones', caption: 'Seeing the whole system from above', placeholder: 'Drone shot', tint: '#cfe3df', photo: '/images/drone.webp' },
   { title: 'The beach', caption: 'Where I reset and think clearly', placeholder: 'Beach photo', tint: '#f1dcc3', photo: '/images/beach.webp' },
   { title: 'Trekking', caption: 'Long trails, one step at a time', placeholder: 'Trekking photo', tint: '#d6decb', photo: '/images/trekking.webp' },
-  { title: 'The gym', caption: 'Consistency beats intensity', placeholder: 'Gym photo', tint: '#d9d4e4', photo: '' },
+  { title: 'The gym', caption: 'Consistency beats intensity', placeholder: 'Gym photo', tint: '#d9d4e4', photo: '/images/gym.webp' },
   {
     title: 'Gaming',
     caption: 'PlayStation fan. Horizon, Spider-Man: Miles Morales and Assassin\'s Creed on top; Pokémon and Mario at heart',
