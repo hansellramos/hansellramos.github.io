@@ -80,4 +80,13 @@ export const interests = [
     tint: '#d3dcef',
     photo: '',
   },
+  { title: 'Music', caption: 'DJ behind the decks, reading the room', placeholder: 'DJ photo', tint: '#ecd5dc', photo: '' },
+  { title: 'Travel', caption: 'New places, new people, new perspectives', placeholder: 'Travel photo', tint: '#d5e6f1', photo: '' },
+  {
+    title: 'Entrepreneurship',
+    caption: 'Turning ideas into businesses that serve real people',
+    placeholder: 'Venture photo',
+    tint: '#e6dfcc',
+    photo: '',
+  },
 ]

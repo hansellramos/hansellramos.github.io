@@ -12,9 +12,9 @@ import { interests } from '../data/profile'
           <h2 class="section-title">Technology is worth it when it helps someone.</h2>
         </div>
         <p class="lead">
-          That's why AI excites me: it can give people hours of their lives back. When I'm not building, I'm usually
-          outside, on Colombia's Caribbean coast, up a trail or behind a drone controller. And when I'm in, there's
-          usually a PlayStation controller in my hands.
+          That's why AI excites me: it can give people hours of their lives back. I'm also an entrepreneur and a DJ.
+          When I'm not building, I'm traveling, on Colombia's Caribbean coast, up a trail or behind a drone
+          controller, and at home there's usually a PlayStation controller in my hands.
         </p>
       </div>
       <div class="grid">
@@ -66,8 +66,14 @@ import { interests } from '../data/profile'
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 figure {
