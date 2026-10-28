@@ -18,6 +18,16 @@ export const shared = {
     ['Laravel', 'Vue'],
     ['LLMs', 'Laravel + Vue'],
   ],
+  projects: [
+    {
+      id: 'sphinx',
+      name: 'Sphinx',
+      url: 'https://github.com/hansellramos/open-sphinx',
+      repo: 'hansellramos/open-sphinx',
+      license: 'AGPL-3.0',
+      tags: ['Vue 3', 'Pinia', 'Node', 'Express', 'Prisma', 'WebAuthn PRF', 'Web Crypto', 'HLS'],
+    },
+  ],
   interests: [
     { tint: '#cfe3df', photo: '/images/drone.webp' },
     { tint: '#f1dcc3', photo: '/images/beach.webp' },
@@ -32,7 +42,7 @@ export const shared = {
 
 export const content = {
   en: {
-    nav: { work: 'Work', how: 'How I work', beyond: 'Beyond code', contact: 'Contact', cv: 'Download CV', lang: 'Language' },
+    nav: { work: 'Work', how: 'How I work', projects: 'Projects', beyond: 'Beyond code', contact: 'Contact', cv: 'Download CV', lang: 'Language' },
     hero: {
       headline: 'I build software that gives people back their time.',
       intro:
@@ -97,6 +107,19 @@ export const content = {
       { title: 'Verify', body: 'Full suite, Playwright, static analysis, line-by-line review' },
       { title: 'Ship', body: 'Docs and a clear PR, ready for the team' },
     ],
+    projectsSection: {
+      prompt: 'ls ~/side-projects',
+      title: 'Things I build for myself',
+      lead: 'Personal projects where I try ideas end to end, from the first commit to daily use.',
+      openRepo: 'View on GitHub',
+      privateLabel: 'private repo',
+    },
+    projects: [
+      {
+        tagline: 'End-to-end encrypted photo, video and file vault you host yourself',
+        body: 'A self-hosted vault where the server only stores ciphertext: it never sees files, names, tags, dates or locations. You unlock it with a passkey (WebAuthn PRF). It streams encrypted HLS video decrypted in the browser, and I run it every day on a small home NAS.',
+      },
+    ],
     beyond: {
       prompt: 'what drives you?',
       title: 'Technology is worth it when it helps someone.',
@@ -124,7 +147,7 @@ export const content = {
   },
 
   es: {
-    nav: { work: 'Proyectos', how: 'Cómo trabajo', beyond: 'Más allá del código', contact: 'Contacto', cv: 'Descargar CV', lang: 'Idioma' },
+    nav: { work: 'Trabajo', how: 'Cómo trabajo', projects: 'Proyectos', beyond: 'Más allá del código', contact: 'Contacto', cv: 'Descargar CV', lang: 'Idioma' },
     hero: {
       headline: 'Construyo software que le devuelve tiempo a la gente.',
       intro:
@@ -188,6 +211,19 @@ export const content = {
       { title: 'Construir', body: 'Claude Code hace el borrador, yo guío las decisiones de diseño' },
       { title: 'Verificar', body: 'Suite completa, Playwright, análisis estático y revisión línea por línea' },
       { title: 'Entregar', body: 'Documentación y un PR claro, listo para el equipo' },
+    ],
+    projectsSection: {
+      prompt: 'ls ~/proyectos-personales',
+      title: 'Lo que construyo para mí',
+      lead: 'Proyectos personales donde llevo ideas de principio a fin, desde el primer commit hasta el uso diario.',
+      openRepo: 'Ver en GitHub',
+      privateLabel: 'repo privado',
+    },
+    projects: [
+      {
+        tagline: 'Bóveda de fotos, videos y archivos con cifrado de extremo a extremo, alojada por ti',
+        body: 'Una bóveda autoalojada donde el servidor solo guarda datos cifrados: nunca ve archivos, nombres, etiquetas, fechas ni ubicaciones. Se desbloquea con una passkey (WebAuthn PRF), reproduce video HLS cifrado que se descifra en el navegador, y la uso a diario en un pequeño NAS en casa.',
+      },
     ],
     beyond: {
       prompt: '¿qué te mueve?',

@@ -17,6 +17,10 @@
 - Compliance CRM: led the rewrite of a legacy PHP 5 system serving 124 US small businesses into a Laravel API and Vue app, migrated with the Strangler Fig pattern and zero downtime.
 - Travelia: designed and prototyped AI features embedded in the core product (proof of concept, under evaluation).
 
+## Personal projects
+
+- Sphinx (https://github.com/hansellramos/open-sphinx): self-hosted, end-to-end encrypted photo, video and file vault. Passkey unlock with WebAuthn PRF, encrypted HLS streaming decrypted in the browser. Vue 3, Node, Express, Prisma. AGPL-3.0.
+
 ## Availability
 
 Open to senior remote roles in PHP/Laravel, Vue and AI-assisted development, working US Eastern hours.

@@ -6,6 +6,7 @@ import { lang, languages, t } from '../i18n'
 const links = computed(() => [
   { href: '#work', label: t.value.nav.work },
   { href: '#how', label: t.value.nav.how },
+  { href: '#projects', label: t.value.nav.projects },
   { href: '#beyond', label: t.value.nav.beyond },
   { href: '#contact', label: t.value.nav.contact },
 ])
