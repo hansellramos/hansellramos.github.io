@@ -78,7 +78,7 @@ export const interests = [
     caption: 'PlayStation fan. Horizon, Spider-Man: Miles Morales and Assassin\'s Creed on top; Pokémon and Mario at heart',
     placeholder: 'Gaming setup photo',
     tint: '#d3dcef',
-    photo: '',
+    photo: '/images/gaming.webp',
   },
   { title: 'Music', caption: 'DJ behind the decks, reading the room', placeholder: 'DJ photo', tint: '#ecd5dc', photo: '' },
   { title: 'Travel', caption: 'New places, new people, new perspectives', placeholder: 'Travel photo', tint: '#d5e6f1', photo: '/images/travel.webp' },
