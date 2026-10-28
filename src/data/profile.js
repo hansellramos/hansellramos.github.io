@@ -87,6 +87,6 @@ export const interests = [
     caption: 'Turning ideas into businesses that serve real people',
     placeholder: 'Venture photo',
     tint: '#e6dfcc',
-    photo: '',
+    photo: '/images/entrepreneurship.webp',
   },
 ]
